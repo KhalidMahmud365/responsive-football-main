@@ -150,18 +150,93 @@ p{
 
 
 
-/* media query  */
+/*------------
+ media query
+ ---------------*/
 
-@media only screen and (max-width:600px){
-.container{
-        justify-content: center;
-        width: 100%;
+/* mobile devices for Pixel 2X / iphone X */
+@media only screen and (max-width:685px){
+    .top-container{
+    width: 100%;
     }
-.top-container{
-        width: 100%;
+    h1{
+        position: absolute;
+        width: 278px;
+        height: 138px;
+        margin-left: 16px;
+        margin-top: 112px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
     }
-.players{
+    .anchor-button{
+       width: 125px;
+       height: 25px;
+       margin-left: 19px;
+       margin-top: 250px;
+       padding: 7px 10px; 
+    }
+    .anchor-button:hover{
+        text-align: center;
+        background: linear-gradient(45deg, rgb(82, 4, 49), rgb(240, 136, 197));
+        height: 60px;
+        width: 240px;
+    }
+    .top-container img{
+        width: 328px;
+        height: 258px;
+        margin-top: 374px;
+        margin-left: 15px;
+    }
+    .players{
         grid-template-columns: repeat(1, 1fr);
+        width: 330px;
+        margin-left: 16px;
     }
+    .football img {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        animation: football 3s linear infinite alternate;
+    }
+    @keyframes football {
+        0%{
+            top: 7000px;
+            left: 0px;
+            transform: rotate(0deg);
+        }
+        25%{
+            top: 6600px;
+            left: 75px
+            transform: rotate(360deg);
+        }
+        50% {
+            top: 7000px;
+            left: 150px;
+            transform: rotate(0deg);
+        }
+        75%{
+            top: 6600px;
+            left: 225px;
+            transform: rotate(360deg);
     
- }
+        }
+        100%{
+            top: 7000px;
+            left: 300px;
+            transform: rotate(0deg);
+        }
+    }
+    .logo{
+    text-align: center;
+    width: 220px;
+    height: 60px;
+    margin-left: 18px;
+    }
+    .font-awesome{
+    margin-bottom: 240px;
+    }
+    .text{
+    margin-bottom: 230px;
+    }
+}
